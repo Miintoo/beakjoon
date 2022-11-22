@@ -21,6 +21,7 @@ for (let i = 2; i < m + 2; i++) {
     let end = +input[i].split(" ")[1];
 
     graph[start].push(end);
+    graph[end].push(start);
 }
 
 
@@ -38,7 +39,6 @@ function DFS(v) {
     }
 }
 
-console.log(graph)
 visited[1] = 1;
 DFS(1);
 console.log(answer);
